@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find baeta_robot_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="baeta_robot" args="left_caster_joint_position_controller left_wheel_joint_position_controller right_wheel_joint_position_controller right_caster_joint_position_controller left_steer_joint_position_controller right_steer_joint_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/baeta_robot/joint_states"/>
+</node>
+
+</launch>

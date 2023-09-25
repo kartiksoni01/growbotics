@@ -1,0 +1,203 @@
+<?xml version="1.0" ?>
+<robot name="baeta_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find baeta_robot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find baeta_robot_description)/urdf/baeta_robot.trans" />
+<xacro:include filename="$(find baeta_robot_description)/urdf/baeta_robot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.18463177834541486 0.012844869846983444 0.4895808454402588" rpy="0 0 0"/>
+    <mass value="191.52635290777818"/>
+    <inertia ixx="42.225958" iyy="36.866677" izz="64.722233" ixy="0.010079" iyz="-0.082292" ixz="4.377876"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_caster_1">
+  <inertial>
+    <origin xyz="4.4521336795000366e-07 3.739393119595036e-07 3.1230820388139513e-07" rpy="0 0 0"/>
+    <mass value="7.481707231769109"/>
+    <inertia ixx="0.084161" iyy="0.167582" izz="0.084161" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.671924 -0.433083 -0.179094" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/left_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.671924 -0.433083 -0.179094" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/left_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="-3.188457200486994e-07 3.743917582621492e-07 2.9897353973074026e-07" rpy="0 0 0"/>
+    <mass value="67.06503443217684"/>
+    <inertia ixx="0.896364" iyy="1.696826" izz="0.896364" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.617476 -0.450083 -0.19996" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.617476 -0.450083 -0.19996" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="-3.188457130542943e-07 3.743917593168611e-07 2.989735397029847e-07" rpy="0 0 0"/>
+    <mass value="67.06503443217684"/>
+    <inertia ixx="0.896364" iyy="1.696826" izz="0.896364" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.617476 0.399917 -0.19996" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.617476 0.399917 -0.19996" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_caster_1">
+  <inertial>
+    <origin xyz="4.452133743892972e-07 3.739393135138158e-07 3.1230820410343973e-07" rpy="0 0 0"/>
+    <mass value="7.481707231769109"/>
+    <inertia ixx="0.084161" iyy="0.167582" izz="0.084161" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.671924 0.416917 -0.179094" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/right_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.671924 0.416917 -0.179094" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/right_caster_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_steer_1">
+  <inertial>
+    <origin xyz="-0.026656864468904584 -6.107742948247008e-05 -0.09824381338251542" rpy="0 0 0"/>
+    <mass value="2.874414572793253"/>
+    <inertia ixx="0.016801" iyy="0.021723" izz="0.015092" ixy="1e-05" iyz="8e-06" ixz="-0.008392"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.531924 -0.433083 -0.391813" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/left_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.531924 -0.433083 -0.391813" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/left_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_steer_1">
+  <inertial>
+    <origin xyz="-0.026656864468898145 -6.107742948147088e-05 -0.09824381338251531" rpy="0 0 0"/>
+    <mass value="2.874414572793253"/>
+    <inertia ixx="0.016801" iyy="0.021723" izz="0.015092" ixy="1e-05" iyz="8e-06" ixz="-0.008392"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.531924 0.416917 -0.391813" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/right_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.531924 0.416917 -0.391813" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://baeta_robot_description/meshes/right_steer_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+<link name="picamera"/>
+
+<joint name="camera" type="fixed">
+  <origin xyz="-0.0 0.0 0.5" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="picamera"/>
+</joint>
+
+<joint name="left_caster_joint" type="continuous">
+  <origin xyz="-0.14 0.0 -0.212719" rpy="0 0 0"/>
+  <parent link="left_steer_1"/>
+  <child link="left_caster_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_wheel_joint" type="continuous">
+  <origin xyz="0.617476 0.450083 0.19996" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="right_wheel_joint" type="continuous">
+  <origin xyz="0.617476 -0.399917 0.19996" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="right_caster_joint" type="continuous">
+  <origin xyz="-0.14 0.0 -0.212719" rpy="0 0 0"/>
+  <parent link="right_steer_1"/>
+  <child link="right_caster_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="left_steer_joint" type="continuous">
+  <origin xyz="-0.531924 0.433083 0.391813" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_steer_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="right_steer_joint" type="continuous">
+  <origin xyz="-0.531924 -0.416917 0.391813" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_steer_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+</robot>
